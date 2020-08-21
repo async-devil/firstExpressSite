@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <title>{{page}} page</title>
+</head>
+
+<body>
+  <div id="background">
+    {{>header}}
+    <div id="body">
+    </div>
+    {{>footer}}
+  </div>
+
+  <script src="js/JQuery.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#{{page}}').addClass('changedBackground')
+  });
+  </script>
+
+</body>
+
+</html>
