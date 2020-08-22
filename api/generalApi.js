@@ -34,6 +34,6 @@ function getData(value, callback) {
   })
 }
 
-getData('Kyiv', (err, data) => {
+getData('Тюмень', (err, data) => {
   console.log(err, data);
 })

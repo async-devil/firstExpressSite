@@ -1,0 +1,30 @@
+{
+  "name": "first-express-site",
+  "version": "1.0.0",
+  "description": "First express based site",
+  "main": "source/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/async-devil/firstExpressSite.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "API",
+    "web-application"
+  ],
+  "author": "async-devil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/async-devil/firstExpressSite/issues"
+  },
+  "homepage": "https://github.com/async-devil/firstExpressSite#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "postman-request": "^2.88.1-postman.24"
+  }
+}
