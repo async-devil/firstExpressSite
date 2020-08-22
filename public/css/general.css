@@ -13,6 +13,12 @@
   src        : url('../fonts/Alata.ttf');
 }
 
+/* @media (max-width: 500px) {
+  #indexHeading {
+    font-size: 4px !important;
+  }
+} */
+
 a:hover {
   -webkit-transition      : 1s ease-out;
   -moz-transition         : 1s ease-out;
@@ -93,8 +99,34 @@ header a:hover {
   font-family     : 'Alata';
 }
 
+.center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width: inherit;
+  height: inherit;
+}
+
 h1 {
+  width: inherit;
   margin: 0;
+
+  text-align: center;
+
+  color: #235f7f;
+
+  font-family: RobotoSlab;
+}
+
+.description {
+  width: inherit;
+
+  text-align: center;
+
+  color: #296e93;
+
+  font-family: Alata;
 }
 
 footer {
