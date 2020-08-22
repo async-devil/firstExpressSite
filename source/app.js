@@ -2,6 +2,8 @@ const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
 
+//test
+
 const viewsDirPath = path.join(__dirname, "../templates/views");
 const publicDirPath = path.join(__dirname, "../public");
 const partialsDirPath = path.join(__dirname, "../templates/partials");
@@ -28,13 +30,13 @@ app.get("/help", (req, res) => {
   });
 });
 
-app.get('/help/*', (req, res) => {
-  res.render('404', {
-    page: 'Help',
-    pageLoc: 'help ',
-    pageType: '404'
-  })
-})
+app.get("/help/*", (req, res) => {
+  res.render("404", {
+    page: "Help",
+    pageLoc: "help ",
+    pageType: "404"
+  });
+});
 
 app.get("/about", (req, res) => {
   res.render("about", {
@@ -42,13 +44,13 @@ app.get("/about", (req, res) => {
   });
 });
 
-app.get('/about/*', (req, res) => {
-  res.render('404', {
-    page: 'About',
-    pageLoc: 'about ',
-    pageType: '404'
-  })
-})
+app.get("/about/*", (req, res) => {
+  res.render("404", {
+    page: "About",
+    pageLoc: "about ",
+    pageType: "404"
+  });
+});
 
 app.get("/app", (req, res) => {
   res.render("app", {
@@ -56,20 +58,20 @@ app.get("/app", (req, res) => {
   });
 });
 
-app.get('/app/*', (req, res) => {
-  res.render('404', {
-    page: 'App',
-    pageLoc: 'app ',
-    pageType: '404'
-  })
-})
+app.get("/app/*", (req, res) => {
+  res.render("404", {
+    page: "App",
+    pageLoc: "app ",
+    pageType: "404"
+  });
+});
 
-app.get('*', (req, res) => {
-  res.render('404', {
-    page: '404',
-    pageLoc: ''
-  })
-})
+app.get("*", (req, res) => {
+  res.render("404", {
+    page: "404",
+    pageLoc: ""
+  });
+});
 
 app.listen(3000, () => {
   console.log("Server is on port 3000");
