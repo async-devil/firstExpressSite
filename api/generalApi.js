@@ -4,15 +4,15 @@ const timeApi = require('./timeApi.js');
 
 var data = []
 
-function getData(value, callback) {
-  geocodeApi(value, (err, res) => {
+function getData(location, callback) {
+  geocodeApi(location, (err, res) => {
     if (err === undefined) {
       data.push(res)
       var {
-        x,
-        y
+        lat,
+        lon
       } = res;
-      weatherApi(x, y, (err, res) => {
+      weatherApi(lat, lon, (err, res) => {
         if (err === undefined) {
           data.push(res)
           timeApi(res.timezone_id, (err, res) => {
@@ -34,6 +34,4 @@ function getData(value, callback) {
   })
 }
 
-getData('Тюмень', (err, data) => {
-  console.log(err, data);
-})
+module.exports = getData;

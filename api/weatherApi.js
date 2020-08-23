@@ -1,7 +1,10 @@
 const request = require("postman-request");
+const tokens = require('./tokenConfig.js');
 
-function getWeather(x, y, callback) {
-  const weatherUrl = "http://api.weatherstack.com/current?access_key=4b52b068ca4f4fbaedf08874078c2aac&query=" + x + ', ' + y;
+const {weatherToken} = tokens;
+
+function getWeather(lat, lon, callback) {
+  const weatherUrl = "http://api.weatherstack.com/current?access_key=" + weatherToken + "&query=" + lat + ', ' + lon;
   request({
     url: weatherUrl
   }, (error, response) => {
