@@ -33,10 +33,10 @@ More about valid locations in [offical Mapbox documentation](https://docs.mapbox
 Callback have two arguments error and response
 * Errors:
 There are 2 error types, **404** and **403**
-Error 404 errors you that place you wish to find is missing in data base
-Error 403 errors you that server ther contains data is not responding or if you work on local host, your internet conection is corrupted
-Before each error there is a string that is informing you which API part has an error
-**For example:**
+Error **404** errors you that place you wish to find is missing in data base.
+Error **403** errors you that server ther contains data is not responding or if you work on local host, your internet conection is corrupted.
+Before each error there is a string that is informing you which API part has an error.
+For example:
 ```
 console.log(err, res)
 
@@ -54,7 +54,7 @@ console.log(err, res)
 
 Time API 404 [{/*Geocode response*/},{/*Weather response*/}, undefined]
 ```
-**This solution is due to the reliability of the Time API server, so if you would like to use this API, you would be better if you change Time API**
+**This solution is due to the reliability of the Time API server, so if you would like to use this API, you would be better if you change Time API.**
 Of course in places there are comments will be response, not comments
 * Response
 Response is an array, that contains three objects of response data:
@@ -72,7 +72,7 @@ The weather response object contains:
  2. **city:** 'Cubitt Town',
  3. **country:** 'United Kingdom',
  4. **weatherTime:** '08:04 AM', *Time when the observatory took measurements*
- 5. **temperature:** 17,
+ 5. **temperature:** 17, *degrees Celsius*
  6. **weatherDescription:** Partly cloudy', *Here could be more than one description*
  7. **weatherVForm:** [ ' is ', 'description' ] *If in the object above there is more then one description, value will be [' are ', ' descriptions ']*
 
@@ -114,7 +114,7 @@ undefined [ { lat: 51.50722, lon: -0.1275 },
     minute: '04',
     second: '15' } ]
 ```
-**Example of wrong place**
+**Example of wrong query**
 ```
 api('Londonksksksksk', (err, res) => {
   console.log(err, res)
