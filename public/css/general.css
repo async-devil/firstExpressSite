@@ -129,6 +129,38 @@ h1 {
   font-family: Alata;
 }
 
+input {
+  display: inline-block;
+
+  height: 5vh;
+
+  color: #fff;
+  border-color:#235f7f;
+  border-radius: 0px;
+  background-color: #296e93;
+
+  font-size: 3vh;
+}
+
+form {
+  height: 5vh;
+  margin-top: 1vh;
+}
+
+button {
+  width: 6vh;
+  height: 5vh;
+  margin-left: 0.5vh;
+  padding: 0;
+
+  color: #fff;
+  border-color:#235f7f;
+  border-radius: 0px;
+  background-color: #296e93;
+
+  font-size: 2vh;
+}
+
 footer {
   display         : flex;
   align-items     : center;
