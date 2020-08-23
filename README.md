@@ -8,11 +8,11 @@ This site is first Express app I've built
   * npm install
 
 # Documentation
-  ## public folder
+  1. ## public folder
     There are containing public files like css, front-end js and fonts
-  ## src
+  2. ## src
     There are containing back-end js and api files
-  ## templates
+  3. ## templates
     ### partials
       There are containing static html parts
     ### views
