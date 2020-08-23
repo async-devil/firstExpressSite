@@ -1,23 +1,30 @@
 const form = document.querySelector('form')
 const search = document.querySelector('input')
 
+var weather = document.querySelector('#weatherOutput')
+var time = document.querySelector('#timeOutput')
+
 form.addEventListener('submit', (event) => {
   event.preventDefault()
-  console.log(search.value);
   if (search.value !== '') {
-    fetch('http://localhost:3000/app/weather/api?search=' + search.value).then((res) => {
+    weather.textContent = 'Loading...';
+    time.textContent = '';
+    fetch('weather/api?search=' + search.value).then((res) => {
       res.json().then((data) => {
         if (data.error) {
-          console.log(data.error);
+          weather.textContent = 'Invalid query ' + data.error;
+          time.textContent = '';
         } else if (data.error === 'Time API 404') {
-          console.log(data.weatherData)
+          weather.textContent = 'For ' + data.weatherData.weatherTime + ' temperature was ' + data.weatherData.temperature + ' degrees and weather was ' + data.weatherData.weatherDescription.toLowerCase();
+          time.textContent = 'Invalid query ' + data.error;
         } else {
-          console.log(data.weatherData)
-          console.log(data.timeData);
+          weather.textContent = 'For ' + data.weatherData.weatherTime + ' temperature was ' + data.weatherData.temperature + ' degrees and weather was ' + data.weatherData.weatherDescription.toLowerCase();
+          time.textContent = 'Now is ' + data.timeData.year + '/' + data.timeData.month + '/' + data.timeData.day + ' ' + data.timeData.hour + ':' + data.timeData.minute + ':' + data.timeData.second;
         }
       })
     })
   } else {
-    alert('Please input something')
+    weather.textContent = 'Please enter value';
+    time.textContent = '';
   }
 })
