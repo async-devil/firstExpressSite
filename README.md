@@ -1,5 +1,5 @@
 # About
-This site is first Express app I've built
+This site is first Express app I've ever built
 
 # Requirments
   * Node.js installed
